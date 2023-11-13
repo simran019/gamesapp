@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import BottomTabNavigator from './navigation/BottomTabNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+let customFonts = {
+  "Avier": require("./assets/Montserrat-VariableFont_wght.ttf"),
+};
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Games app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <BottomTabNavigator/>
+    </NavigationContainer>
   );
 }
 
@@ -16,5 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
 });
