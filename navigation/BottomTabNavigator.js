@@ -20,20 +20,20 @@ const BottomTabNavigator =()=>{
               }else if(route.name == "Research"){
                 iconName = focused ?'search':'search'
               }else if(route.name == "Leaderboard"){
-                iconName = focused ?'bar-chart':'bar-chart'
+                iconName = focused ?'stats-chart':'stats-chart'
               }
               else if(route.name == "Profile"){
                 iconName = focused ?'person':'person'
               }
-              return <Ionicons name={iconName} size={size} color={color}/>
-            }
-        })}
-      tabBarOptions={{
-        activeTintColor:"#6231AD",
-        inactiveTintColor:"gray"
-      }}
+              return <Ionicons name={iconName} size={24} color={color}/>
+            },
+            tabBarActiveTintColor:"#6231AD",
+            tabBarInactiveTintColor:"#B5C0C8"
+        }
+        )
+      }
         >
-            <Tab.Screen name="Home" component={Screen1} options={{headerShown:false}}/>
+            <Tab.Screen name="Home" component={Screen3} options={{headerShown:false}}/>
             <Tab.Screen name="League" component={Screen1} options={{headerShown:false}}/>
             <Tab.Screen name="Research" component={Screen1} options={{headerShown:false}}/>
             <Tab.Screen name="Leaderboard" component={Screen1} options={{headerShown:false}}/>
