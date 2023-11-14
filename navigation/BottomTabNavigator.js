@@ -15,7 +15,7 @@ const BottomTabNavigator =()=>{
               let iconName;
               if(route.name == "Home"){
                 iconName = focused?'home':'home'
-              }else if(route.name == "League"){
+              }else if(route.name == "Leagues"){
                 iconName = focused ?'trophy':'trophy'
               }else if(route.name == "Research"){
                 iconName = focused ?'search':'search'
@@ -28,16 +28,17 @@ const BottomTabNavigator =()=>{
               return <Ionicons name={iconName} size={24} color={color}/>
             },
             tabBarActiveTintColor:"#6231AD",
-            tabBarInactiveTintColor:"#B5C0C8"
-        }
+            tabBarInactiveTintColor:"#B5C0C8",
+            tabBarLabelStyle:{fontFamily:'Montserrat-Light'},
+            }
         )
       }
         >
             <Tab.Screen name="Home" component={Screen3} options={{headerShown:false}}/>
-            <Tab.Screen name="League" component={Screen1} options={{headerShown:false}}/>
-            <Tab.Screen name="Research" component={Screen1} options={{headerShown:false}}/>
-            <Tab.Screen name="Leaderboard" component={Screen1} options={{headerShown:false}}/>
-            <Tab.Screen name="Profile" component={Screen3} options={{headerShown:false}}/>
+            <Tab.Screen name="Leagues" component={Screen1} options={{headerShown:false}}/>
+            <Tab.Screen name="Research" component={Screen2} options={{headerShown:false}}/>
+            <Tab.Screen name="Leaderboard" component={Screen2} options={{headerShown:false}}/>
+            <Tab.Screen name="Profile" component={Screen1} options={{headerShown:false}}/>
 
         </Tab.Navigator>
     )

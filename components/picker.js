@@ -50,12 +50,12 @@ const PredictionPicker = () => {
         <View
           style={{
             overflow:'hidden',
-            backgroundColor:item==i?'gray':'white'
           }}
         >
           <ListItem key={i}  style={{textAlign:'center',overflow:'hidden',}} bottomDivider>
             <ListItem.Content>
-              <ListItem.Title style={styles.title}>
+              <ListItem.Title style={[styles.title,
+            {backgroundColor:item.title=="30"?'#b8b2c2':'white',width:"100%"}]}>
                 {`${item.title}`}
               </ListItem.Title>
             </ListItem.Content>

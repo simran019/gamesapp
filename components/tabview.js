@@ -194,7 +194,8 @@ export default class TabViewExample extends React.Component {
                   opacity,
                   color: this.state.index == i ? "#6231AD" : "gray",
                   fontSize: 14,
-                  fontWeight: 600,
+                  fontWeight: 500,
+                  fontFamily:'Montserrat-Light'
                 }}
               >
                 {route.title}
@@ -243,11 +244,13 @@ const styles = StyleSheet.create({
     fontWeight: 600,
     color: "#333333",
     marginBottom: 6,
+    fontFamily:'Montserrat-SemiBold'
   },
   subtitle: {
     fontSize: 14,
     fontWeight: 500,
     color: "#727682",
+    fontFamily:'Montserrat-Light'
   },
   lowerLeftContaiiner: {
     alignSelf: "flex-end",

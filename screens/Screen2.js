@@ -1,11 +1,25 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Screen2 =()=>{
     return(
-        <View>
-            <Text>Screen 2</Text>
-        </View>
+        <SafeAreaView style={styles.containerStyle}>
+            <Text style={{textAlign:'center'}}>No Content yet added</Text>
+        </SafeAreaView>
     )
 }
 
 export default Screen2;
+
+const styles = StyleSheet.create({
+    containerStyle: {
+      display: "flex",
+      flex: 1,
+      padding: 10,
+      backgroundColor: "white",
+      width: "auto",
+      height: "auto",
+      gap: 12,
+      textAlign:'center'
+    },
+})
