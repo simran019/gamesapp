@@ -38,14 +38,7 @@ const FirstRoute = () => {
       title: "Born Winner",
       desc: "Top 10 % of highest spending players in a month",
     },
-    {
-      title: "First Stripe Earned",
-      desc: "Top 10 % of highest spending players in a month",
-    },
-    {
-      title: "First Stripe Earned",
-      desc: "Top 10 % of highest spending players in a month",
-    },
+    
   ];
   renderItem = ({ item, i }) => {
     return (
@@ -62,9 +55,12 @@ const FirstRoute = () => {
         <ListItem key={i} bottomDivider>
           <Image source={require("../assets/tabitemicon.png")} />
           <ListItem.Content>
-            <ListItem.Title style={styles.title}>
-              {`${item.title}`}
-            </ListItem.Title>
+          <ListItem.Title style={[styles.title,{color: "#333333"}]}>
+                {`${item.title} `}
+                {
+                item.title=="First Stripe Earned"?<ListItem.Title style={[styles.title,{color:"#FFA600"}]}> x 3</ListItem.Title>:null
+              }
+              </ListItem.Title>
             <ListItem.Subtitle style={styles.subtitle}>
               {`${item.desc}`}
             </ListItem.Subtitle>
@@ -109,14 +105,6 @@ const SecondRoute = () => {
         title: "Born Winner",
         desc: "Top 10 % of highest spending players in a month",
       },
-      {
-        title: "First Stripe Earned",
-        desc: "Top 10 % of highest spending players in a month",
-      },
-      {
-        title: "First Stripe Earned",
-        desc: "Top 10 % of highest spending players in a month",
-      },
     ];
     renderItem = ({ item, i }) => {
       return (
@@ -128,12 +116,16 @@ const SecondRoute = () => {
             overflow:'hidden',
             marginBottom: 10,
           }}
+          key={i}
         >
           <ListItem key={i} bottomDivider>
             <Image source={require("../assets/tabitemicon.png")} />
             <ListItem.Content>
-              <ListItem.Title style={styles.title}>
-                {`${item.title}`}
+              <ListItem.Title style={[styles.title,{color: "#333333"}]}>
+                {`${item.title} `}
+                {
+                item.title=="First Stripe Earned"?<ListItem.Title style={[styles.title,{color:"#FFA600"}]}> x 3</ListItem.Title>:null
+              }
               </ListItem.Title>
               <ListItem.Subtitle style={styles.subtitle}>
                 {`${item.desc}`}
@@ -242,7 +234,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 14,
     fontWeight: 600,
-    color: "#333333",
+    
     marginBottom: 6,
     fontFamily:'Montserrat-SemiBold'
   },

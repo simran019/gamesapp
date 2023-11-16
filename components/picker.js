@@ -1,120 +1,38 @@
-import * as React from "react";
-import {
-  Animated,
-  View,
-  TouchableOpacity,
-  StyleSheet,
-  StatusBar,
-  FlatList,
-  Text,
-  Image,
-} from "react-native";
-import { ListItem, Icon } from "react-native-elements";
 
+import { ScrollView, Text, View, StyleSheet,} from "react-native";
 
-const PredictionPicker = () => {
-    const allTransactions = [
-      {
-        title: "10",
-      },
-      {
-        title: "20",
-      },
-      {
-        title: "30",
-      },
-      {
-        title: "40",
-      },
-      {
-        title: "50",
-      },
-      {
-        title: "60",
-      },
-      {
-        title: "70",
-      },
-      {
-        title: "80",
-      },
-      {
-        title: "90",
-      },
-      {
-        title: "100",
-      },
-    ];
-    renderItem = ({ item, i }) => {
-      return (
-        <View
-          style={{
-            overflow:'hidden',
-          }}
-        >
-          <ListItem key={i}  style={{textAlign:'center',overflow:'hidden',}} bottomDivider>
-            <ListItem.Content>
-              <ListItem.Title style={[styles.title,
-            {backgroundColor:item.title=="30"?'#b8b2c2':'white',width:"100%"}]}>
-                {`${item.title}`}
-              </ListItem.Title>
-            </ListItem.Content>
-          </ListItem>
-        </View>
-      );
-    };
-    return (
-      <View style={[styles.container,{overflow:'scroll'}]}>
-        <FlatList
-          data={allTransactions}
-          renderItem={this.renderItem}
-          keyExtractor={(item, index) => index.toString()}
-        />
-      </View>
-    );
-  };
+const PredictionPicker =()=>{
+  const arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+  return(
+    <View style={{backgroundColor:"white", maxHeight:"40%", overflowY:"auto !important", padding:10, width:"100%", textAlign:"center"}}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {
+          arr.map((item)=>{
+            return <Text style={[styles.title, {backgroundColor:item==2?"#D3D3D3":"white", color:item==2?"#333333":"#D3D3D3",}]} key={item}>{item}</Text>
+          })
+        }
+      </ScrollView>
+    </View>
+  )
+}
 
-  const styles = StyleSheet.create({
-    container: {
-      borderRadius: 4,
-      padding: 4,
-      width:"100%",
-      height:"50%",
-      overflow:'scroll'
-    },
-    tabBar: {
-      flexDirection: "row",
-      paddingTop: StatusBar.currentHeight,
-    },
-    tabItem: {
-      flex: 1,
-      alignItems: "center",
-      padding: 16,
-    },
-    title: {
-      fontSize: 14,
-      fontWeight: 600,
-      color: "black",
-      textAlign:'center',
-      alignSelf:'center'
-    },
-    subtitle: {
-      fontSize: 14,
-      fontWeight: 500,
-      color: "#727682",
-    },
-    lowerLeftContaiiner: {
-      alignSelf: "flex-end",
-    },
-    transactionContainer: {
-      flexDirection: "row",
-      justifyContent: "space-evenly",
-      alignItems: "center",
-    },
-    transactionText: {
-      fontSize: 20,
-    },
-  });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    borderRadius: 4,
+    padding: 4,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "600",
+    color: "#333333",
+    marginBottom: 6,
+    fontFamily:'Montserrat-SemiBold',
+    backgroundColor:"yellow",
+    textAlign:"center",
+    padding:12
+  },
   
+});
   
 export default PredictionPicker;

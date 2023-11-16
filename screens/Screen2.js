@@ -1,10 +1,11 @@
 import { View, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import PredictionPicker from "../components/picker";
 
 const Screen2 =()=>{
     return(
         <SafeAreaView style={styles.containerStyle}>
-            <Text style={{textAlign:'center'}}>No Content yet added</Text>
+            <Text>No content added yet</Text>
         </SafeAreaView>
     )
 }
@@ -20,6 +21,8 @@ const styles = StyleSheet.create({
       width: "auto",
       height: "auto",
       gap: 12,
+      justifyContent:"center",
+      alignItems:"center",
       textAlign:'center'
     },
 })

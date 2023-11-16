@@ -4,7 +4,6 @@
     "slug": "games",
     "version": "1.0.0",
     "orientation": "portrait",
-    
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -22,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.simran9000.games"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "87c0e540-052b-448e-a944-ef437b55cdce"
+      }
     }
   }
 }
